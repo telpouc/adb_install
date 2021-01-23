@@ -18,7 +18,6 @@ adb_install xxx.zip
 * 把zip包拖拽到 adb_install.cmd 文件上即可(可以创建快捷方式到桌面)
 * 或者直接双击 adb_install.cmd，再把zip包拖拽到窗口，然后回车确认即可
 
-
 ## 压缩包要求
 * 压缩包内的根目录需存在 install.sh
 * 请保证设备上能用 unzip 解压你的压缩包
