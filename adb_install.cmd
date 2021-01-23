@@ -2,11 +2,11 @@
 set PACKAGE_FILE=%1
 if "%PACKAGE_FILE%"=="" set /P PACKAGE_FILE=Input package file: 
 
-pushd %~dp0
-where adb.exe >nul 2>nul
+where adbd.exe >nul 2>nul
 if %ERRORLEVEL% NEQ 0 (
 setlocal enabledelayedexpansion
-path !CD!\platform-tools;!PATH!
+path %~dp0platform-tools;!PATH!
+echo !PATH!
 )
 
 echo Uploading...
