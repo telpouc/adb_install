@@ -5,9 +5,8 @@ if [ "$PACKAGE_FILE" = "" ]
     read -p "Input package file: " PACKAGE_FILE
 fi
 
-cd $(dirname $0)
 if ! which adb >/dev/null; then
-    export PATH=$PWD/platform-tools:$PATH
+    export PATH=$(cd $(dirname $0); pwd)/platform-tools:$PATH
 fi
 
 echo Uploading...
