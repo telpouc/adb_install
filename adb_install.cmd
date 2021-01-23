@@ -6,7 +6,6 @@ where adbd.exe >nul 2>nul
 if %ERRORLEVEL% NEQ 0 (
 setlocal enabledelayedexpansion
 path %~dp0platform-tools;!PATH!
-echo !PATH!
 )
 
 echo Uploading...
