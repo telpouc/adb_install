@@ -1,0 +1,33 @@
+#!/bin/bash
+
+PACKAGE_FILE=$1
+if [ "$PACKAGE_FILE" = "" ]
+    read -p "Input package file: " PACKAGE_FILE
+fi
+
+cd $(dirname $0)
+if ! which adb >/dev/null; then
+    export PATH=$PWD/platform-tools:$PATH
+fi
+
+echo Uploading...
+adb push "$PACKAGE_FILE" /update.zip
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+echo Unpacking...
+adb shell unzip -oq update.zip -x README.md
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+adb shell rm /update.zip
+
+echo Installing...
+adb shell chmod +x /install.sh
+adb shell /install.sh
+if [ $? -ne 0 ]; then
+    echo "Install failed"
+    exit 1
+fi
+adb reboot
