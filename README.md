@@ -5,7 +5,7 @@
 https://github.com/telpouc/adb_install/archive/1.0.1.zip
 
 ## 使用
-* 请使用数据线连接设备，暂不支持网络连接和同时连接多个ADB设备。
+* 请使用数据线连接设备(或adb connect IP)，暂不支持同时连接多个ADB设备。
 * 如果你的系统已经安装了adb工具，可以把本项目的 platform-tools 目录 删掉。
 
 ### 命令行方式
