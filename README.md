@@ -15,7 +15,7 @@ adb_install xxx.zip
 为了避免系统找不到 adb_install，需要把 adb_install.cmd 所在目录路径添加到 PATH 环境变量。
 
 ### 拖拽文件方式
-* 把zip包拖拽到 adb_install.cmd 文件上即可(可以创建快捷方式到桌面)
+* 把zip包拖拽到 adb_install.cmd（或adb_install.cmd的快捷方式）文件上即可
 * 或者直接双击 adb_install.cmd，再把zip包拖拽到窗口，然后回车确认即可
 
 ## 压缩包要求
