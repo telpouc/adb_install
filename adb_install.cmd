@@ -2,7 +2,7 @@
 set PACKAGE_FILE=%1
 if "%PACKAGE_FILE%"=="" set /P PACKAGE_FILE=Input package file: 
 
-where adbd.exe >nul 2>nul
+where adb.exe >nul 2>nul
 if %ERRORLEVEL% NEQ 0 (
 setlocal enabledelayedexpansion
 path %~dp0platform-tools;!PATH!
