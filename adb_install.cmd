@@ -27,6 +27,6 @@ adb shell /install.sh
 if %ERRORLEVEL% NEQ 0 (
     goto END
 )
-adb reboot
+adb shell reboot
 :END
 pause
